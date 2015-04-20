@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" ng-app>
+
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+     <title>Curriculum Vitae - William Bettencourt</title>
+
+     <style type="text/css">
+        * { margin: 0; padding: 0; }
+        body { font: 16px Helvetica, Sans-Serif; line-height: 24px; background: url(images/noise.jpg); }
+        .clear { clear: both; }
+        #page-wrap { width: 800px; margin: 40px auto 60px; }
+        #pic { float: right; margin:3px; }
+        h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
+        h2 { font-size: 18px; margin: 0 0 6px 0; position: relative; }
+        h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
+        p { margin: 0 0 16px 0; }
+        a { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
+        a:hover { border-bottom-style: solid; color: black; }
+        ul { margin: 0 0 32px 17px; }
+        #objective { width: 500px; float: left; }
+        #objective p { font-family: Georgia, Serif; font-style: italic; color: #666; }
+        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
+        dd { width: 600px; float: right; }
+        dd.clear { float: none; margin: 0; height: 15px; }
+        .retrato { background-color: #FFF; float: right; background-color: #FFF; padding: 3px; border: 1px solid #BBB; margin-right:5px;}
+        .idiomas {
+            position: fixed;
+            top: 0%;
+            left: 50%;
+        }
+        .idiomas img { margin-right: 10px;}      
+     </style>
+     <script src="bower_components/angular/angular.min.js"></script>
+     <script src="bower_components/angular-translate/angular-translate.min.js"></script>
+
+</head>
+
+<body>
+    <div class="idiomas">
+        <div>
+        <img src="images/spain.png" alt="español"/>
+        <img src="images/portugal.png" alt="portugués"/>
+        <img src="images/uk.png" alt="inglés"/>
+        </div>
+    </div>
+    <div id="page-wrap">
+    
+    
+        <div id="contact-info" class="vcard h-card">
+            <div class="retrato">
+                <a class="url fn n u-url" href="http://nazerbayev.github.io">
+                    <img src="images/yo.png" alt="Photo of William" id="pic" class="photo u-photo"/>
+                </a>
+            </div>
+        
+            <!-- Microformats! -->
+        
+            <h1 class="fn p-name">William Bettencourt</h1>
+        
+            <p>
+                Teléfono: <span class="tel">(+58)04242192644</span><br />
+                Correo: <a class="email u-email" href="mailto:williambet@gmail.com">williambet@gmail.com</a>
+            </p>
+
+            <div class="adr">
+              <span class="country-name p-country-name">Venezuela</span>,
+              <span class="locality p-locality">Caracas</span>,
+              <span class="region p-region">Distrito Capital</span>,
+              <span class="postal-code p-adr">1061</span>
+             </div>
+        </div>
+                
+        <div id="objective">
+            <p>
+                I am an outgoing and energetic (ask anybody) young professional, seeking a 
+                career that fits my professional skills, personality, and murderous tendencies. 
+                My squid-like head is a masterful problem solver and inspires fear in who gaze upon it. 
+                I can bring world domination to your organization. 
+            </p>
+        </div>
+        
+        <div class="clear"></div>
+        
+        <dl>
+            <dd class="clear"></dd>
+            <!-- Estudios academicos -->
+            <dt>Estudios Académicos</dt>
+            <dd>
+                <h2>Ingeniería en Informática <span>Universidad Católica Andrés Bello</span></h2>
+                <p><strong>status:</strong> Incompleta - 2009</p>
+
+                <h2>Microsoft Certified Solutions Developer <span>Academia Lourtec</span></h2>
+                <p><strong>status:</strong> Completa - 2015</p>
+            </dd>
+            
+            <dd class="clear"></dd>
+            <!-- Cursos y Seminarios -->
+            <dt>Cursos y Seminarios Realizados</dt>
+            <dd>
+                <h2>2da Jornadas Interuniversitarias de Ciencias de la Computación</h2>
+                <p>Universidad Católica Andrés Bello - 2009</p>
+
+                <h2>Curso de Procesamiento Dígital de Imágenes</h2>
+                <p>Universidad Católica Andrés Bello - 2009</p>
+
+                <h2>Curso de Computación Gráfica</h2>
+                <p>Universidad Católica Andrés Bello - 2009</p>
+
+                <h2>Microsoft Certified Solutions Developer</h2>
+                <p>Academia Lourtec - 2014</p>
+            </dd>
+            
+            <dd class="clear"></dd>
+            
+            <dt>Conocimientos</dt>
+            <dd>
+                <h2>Lenguajes de Programación</h2>
+                <ul>
+                    <li>PHP</li>
+                    <li>Java</li>
+                    <li>c/c++</li>
+                    <li>c#</li>
+                    <li>ActionScript 3.0</li>
+                    <li>PL/SQL</li>
+                    <li>Python</li>
+                    <li>Javascript</li>
+                    <li>En estudio: Scala, Ruby</li>
+                </ul>
+                <h2>Frameworks y Librerías</h2>
+                <ul>
+                    <li>AngularJS 1.x</li>
+                    <li>JQuery, JQueryUI</li>
+                    <li>Microsoft XNA Game Studio Express Framework</li>
+                    <li>Symfony 1</li>
+                    <li>.NET</li>
+                    <li>Mono</li>
+                    <li>Django</li>
+                    <li>Ionic (Phonegap/Cordova)</li>
+                    <li>Google GWT</li>
+                    <li>Librerías Gráficas para Programación de Aplicaciones de Escritorio: Swing, GTK+, Qt4,  Windows Forms, WPF, Windows Store Apps</li>
+                </ul>
+                <h2>Software</h2>
+                <ul>
+                    <li>Eclipse</li>
+                    <li>Netbeans</li>
+                    <li>MonoDevelop</li>
+                    <li>FlashBuilder</li>
+                    <li>FlashDevelop</li>
+                    <li>Visual Studio 2k8, 2k10 y 2k13</li>
+                    <li>SharpDevelop</li>
+                    <li>Pivotal 5</li>
+                    <li>Compiere</li>
+                </ul>
+                <h2>Sistemas Operativos</h2>
+                <ul>
+                    <li>Windows: XP, Vista, Windows 7</li>
+                    <li>Mac OSX Snow Leopard</li>
+                    <li>Linux (Debian): Debian, Ubuntu 10+, Mint 12+, CrunchBang, ElementaryOS</li>
+                    <li>Linux (Archlinux): Archlinux, Archbang, Chakra</li>
+                    <li>Linux (Fedora): Fedora 15</li>
+                </ul>
+            </dd>
+            
+            <dd class="clear"></dd>
+            
+            <dt>Experiencia</dt>
+            <dd>
+                <h2>La Venezolana de Seguros y Vida <span>Coordinador de Aplicaciones (Extranet)</span></h2>
+                <p>Venezuela, Caracas, Las Mercedes - 2015/02/01</p>
+                <ul>
+                    <li>Supervisión de Proyectos de Innovación</li>
+                    <li>Desarrollo y Mantenimiento de las Páginas de la Extranet (Venezuela, Guatemala, Panamá y Puerto Rico)</li>
+                </ul>
+                
+                <h2>La Venezolana de Seguros y Vida <span>Especialista en Aplicaciones Web</span></h2>
+                <p>Venezuela, Caracas, Las Mercedes - 2013/05/01 - 2015/02/01</p>
+                <ul>
+                    <li>Supervisión, Desarrollo y Mantenimiento de las Páginas de la Extranet (Venezuela)</li>
+                </ul>
+
+                <h2>Medianet <span>Consultor Semi Senior</span></h2>
+                <p>Venezuela, Caracas, Las Mercedes - 2012/07/09 - 2013/04/31</p>
+                <ul>
+                    <li>Creación y Mantenimiento de soluciones para Empresas</li>
+                </ul>
+
+                <h2>Beconsult <span>Trabajo Instrumental de Grado</span></h2>
+                <p>Venezuela, Caracas - 2011/10/17</p>
+                <ul>
+                    <li>Creación de una Interfaz Web para el CRM/ERP Opensource Compiere usando Google GWT y programado en Java</li>
+                </ul>
+
+                <h2>Grupo Lanka Venezuela <span>Pasante</span></h2>
+                <p>Venezuela, Caracas - 2011/03/15 - 2011/08/15</p>
+                <ul>
+                    <li>Creación y Mantenimiento de Módulos de Pivotal para el Banco de Brasil</li>
+                </ul>
+
+                <h2>Nova Tecnología Creativa <span>Desarrollador Web Junior</span></h2>
+                <p>Venezuela, Caracas - 2009/08/01 - 2011/02/28</p>
+                <ul>
+                    <li>Creación de Sitios web en Flash</li>
+                    <li>Creación de Backends usando PHP, ASP.NET y MySQL</li>
+                </ul>
+            </dd>
+        </dl>
+        
+        <div class="clear"></div>
+    
+    </div>
+
+</body>
+
+</html>

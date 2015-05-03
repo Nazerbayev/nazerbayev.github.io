@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" ng-app>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 
 <head>
      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -33,17 +33,21 @@
         }
         .idiomas img { margin-right: 10px;}      
      </style>
+     <link href="bower_components/angular-loading-bar/src/loading-bar.css" rel="stylesheet">
      <script src="bower_components/angular/angular.min.js"></script>
      <script src="bower_components/angular-translate/angular-translate.min.js"></script>
+     <script src="bower_components/angular-loading-bar/src/loading-bar.js"></script>
+     <script src="js/app.js"></script>
 
 </head>
 
-<body>
+<body ng-app="cvApp">
+<div ng-controller="pepe">
     <div class="idiomas">
         <div>
-        <img src="images/spain.png" alt="español"/>
-        <img src="images/portugal.png" alt="portugués"/>
-        <img src="images/uk.png" alt="inglés"/>
+        <img src="images/spain.png" alt="español" ng-click="idioma('es')"/>
+        <img src="images/portugal.png" alt="portugués" ng-click="idioma('pt')"/>
+        <img src="images/uk.png" alt="inglés" ng-click="idioma('en')"/>
         </div>
     </div>
     <div id="page-wrap">
@@ -61,8 +65,7 @@
             <h1 class="fn p-name">William Bettencourt</h1>
         
             <p>
-                Teléfono: <span class="tel">(+58)04242192644</span><br />
-                Correo: <a class="email u-email" href="mailto:williambet@gmail.com">williambet@gmail.com</a>
+                {{'TLF' | translate}}: <span class="tel">(+58)04242192644</span><br />
             </p>
 
             <div class="adr">
@@ -87,37 +90,37 @@
         <dl>
             <dd class="clear"></dd>
             <!-- Estudios academicos -->
-            <dt>Estudios Académicos</dt>
+            <dt>{{'ESTUDIOS_ACADEMICOS' | translate }}</dt>
             <dd>
-                <h2>Ingeniería en Informática <span>Universidad Católica Andrés Bello</span></h2>
-                <p><strong>status:</strong> Incompleta - 2009</p>
+                <h2>{{'ING_INFORMATICA'  | translate }} <span>Universidad Católica Andrés Bello</span></h2>
+                <p><strong>status:</strong> {{'STATUS_INCOMPLETA'  | translate }} - 2009</p>
 
-                <h2>Microsoft Certified Solutions Developer <span>Academia Lourtec</span></h2>
-                <p><strong>status:</strong> Completa - 2015</p>
+                <h2>Microsoft Certified Solutions Developer <span>{{'ACADEMIA_LOURTEC'  | translate }}</span></h2>
+                <p><strong>status:</strong> {{'STATUS_COMPLETA'  | translate }} - 2015</p>
             </dd>
             
             <dd class="clear"></dd>
             <!-- Cursos y Seminarios -->
-            <dt>Cursos y Seminarios Realizados</dt>
+            <dt>{{'CURSOS_Y_SEMINARIOS_REALIZADOS'  | translate }}</dt>
             <dd>
-                <h2>2da Jornadas Interuniversitarias de Ciencias de la Computación</h2>
+                <h2>{{'JORNADAS'  | translate }}</h2>
                 <p>Universidad Católica Andrés Bello - 2009</p>
 
-                <h2>Curso de Procesamiento Dígital de Imágenes</h2>
+                <h2>{{'PROC_IMAGENES'  | translate }}</h2>
                 <p>Universidad Católica Andrés Bello - 2009</p>
 
-                <h2>Curso de Computación Gráfica</h2>
+                <h2>{{'COMP_GRAFICA'  | translate }}</h2>
                 <p>Universidad Católica Andrés Bello - 2009</p>
 
                 <h2>Microsoft Certified Solutions Developer</h2>
-                <p>Academia Lourtec - 2014</p>
+                <p>{{'ACADEMIA_LOURTEC'  | translate }} - 2015</p>
             </dd>
             
             <dd class="clear"></dd>
             
-            <dt>Conocimientos</dt>
+            <dt>{{'CONOCIMIENTOS'  | translate }}</dt>
             <dd>
-                <h2>Lenguajes de Programación</h2>
+                <h2>{{'LENGUAJES'  | translate }}</h2>
                 <ul>
                     <li>PHP</li>
                     <li>Java</li>
@@ -127,9 +130,9 @@
                     <li>PL/SQL</li>
                     <li>Python</li>
                     <li>Javascript</li>
-                    <li>En estudio: Scala, Ruby</li>
+                    <li>{{'EN_ESTUDIO' | translate }}: Scala, Ruby</li>
                 </ul>
-                <h2>Frameworks y Librerías</h2>
+                <h2>{{'FRAMEWORKS'  | translate }}</h2>
                 <ul>
                     <li>AngularJS 1.x</li>
                     <li>JQuery, JQueryUI</li>
@@ -140,9 +143,9 @@
                     <li>Django</li>
                     <li>Ionic (Phonegap/Cordova)</li>
                     <li>Google GWT</li>
-                    <li>Librerías Gráficas para Programación de Aplicaciones de Escritorio: Swing, GTK+, Qt4,  Windows Forms, WPF, Windows Store Apps</li>
+                    <li>{{'LIB_APP' | translate }}: Swing, GTK+, Qt4,  Windows Forms, WPF, Windows Store Apps</li>
                 </ul>
-                <h2>Software</h2>
+                <h2>{{'SOFTWARE'  | translate }}</h2>
                 <ul>
                     <li>Eclipse</li>
                     <li>Netbeans</li>
@@ -154,7 +157,7 @@
                     <li>Pivotal 5</li>
                     <li>Compiere</li>
                 </ul>
-                <h2>Sistemas Operativos</h2>
+                <h2>{{'OP_SYSTEMS' | translate }}</h2>
                 <ul>
                     <li>Windows: XP, Vista, Windows 7</li>
                     <li>Mac OSX Snow Leopard</li>
@@ -166,44 +169,44 @@
             
             <dd class="clear"></dd>
             
-            <dt>Experiencia</dt>
+            <dt>{{'XP' | translate }}</dt>
             <dd>
-                <h2>La Venezolana de Seguros y Vida <span>Coordinador de Aplicaciones (Extranet)</span></h2>
+                <h2>La Venezolana de Seguros y Vida <span>{{'CARGO_ACTUAL' | translate }}</span></h2>
                 <p>Venezuela, Caracas, Las Mercedes - 2015/02/01</p>
                 <ul>
-                    <li>Supervisión de Proyectos de Innovación</li>
-                    <li>Desarrollo y Mantenimiento de las Páginas de la Extranet (Venezuela, Guatemala, Panamá y Puerto Rico)</li>
+                    <li>{{'RESP_1' | translate }}</li>
+                    <li>{{'RESP_2' | translate }}</li>
                 </ul>
                 
-                <h2>La Venezolana de Seguros y Vida <span>Especialista en Aplicaciones Web</span></h2>
+                <h2>La Venezolana de Seguros y Vida <span>{{'CARGO_LVSV_INICIO' | translate }}</span></h2>
                 <p>Venezuela, Caracas, Las Mercedes - 2013/05/01 - 2015/02/01</p>
                 <ul>
-                    <li>Supervisión, Desarrollo y Mantenimiento de las Páginas de la Extranet (Venezuela)</li>
+                    <li>{{'RESP_3' | translate }}</li>
                 </ul>
 
-                <h2>Medianet <span>Consultor Semi Senior</span></h2>
+                <h2>Medianet <span>{{'CARGO_MEDIANET' | translate }}</span></h2>
                 <p>Venezuela, Caracas, Las Mercedes - 2012/07/09 - 2013/04/31</p>
                 <ul>
-                    <li>Creación y Mantenimiento de soluciones para Empresas</li>
+                    <li>{{'RESP_4'  | translate }}</li>
                 </ul>
 
-                <h2>Beconsult <span>Trabajo Instrumental de Grado</span></h2>
+                <h2>Beconsult <span>{{'TIG' | translate }}</span></h2>
                 <p>Venezuela, Caracas - 2011/10/17</p>
                 <ul>
-                    <li>Creación de una Interfaz Web para el CRM/ERP Opensource Compiere usando Google GWT y programado en Java</li>
+                    <li>{{'RESP_5' | translate }}</li>
                 </ul>
 
-                <h2>Grupo Lanka Venezuela <span>Pasante</span></h2>
+                <h2>Grupo Lanka Venezuela <span>{{'PASANTE' | translate }}</span></h2>
                 <p>Venezuela, Caracas - 2011/03/15 - 2011/08/15</p>
                 <ul>
-                    <li>Creación y Mantenimiento de Módulos de Pivotal para el Banco de Brasil</li>
+                    <li>{{'RESP_6' | translate }}</li>
                 </ul>
 
-                <h2>Nova Tecnología Creativa <span>Desarrollador Web Junior</span></h2>
+                <h2>Nova Tecnología Creativa <span>{{'CARGO_NOVA' | translate }}</span></h2>
                 <p>Venezuela, Caracas - 2009/08/01 - 2011/02/28</p>
                 <ul>
-                    <li>Creación de Sitios web en Flash</li>
-                    <li>Creación de Backends usando PHP, ASP.NET y MySQL</li>
+                    <li>{{'RESP_7' | translate }}</li>
+                    <li>{{'RESP_8' | translate }}</li>
                 </ul>
             </dd>
         </dl>
@@ -211,7 +214,7 @@
         <div class="clear"></div>
     
     </div>
-
+</div>
 </body>
 
 </html>
